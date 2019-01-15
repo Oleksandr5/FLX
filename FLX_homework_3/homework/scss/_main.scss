@@ -5,11 +5,13 @@
     text-decoration: none;
 }
 
+@mixin hoverA {
+    color: $colorAHover;
+}
+
 @mixin listH1 {
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: -25px;
+    margin: 0;    
+    text-align: right;
     text-transform: uppercase;
 }
 
@@ -26,159 +28,178 @@
     padding: 10px 70px;
     background: $colorBgA;
     color: $bodyBg;
-    border: none;        
+    border: none; 
+    cursor: pointer;  
+    &:hover {
+        background: rgb(27, 197, 240);        
+    }     
 }
 
 body {
-
     background: $bodyBg;
     font: $font;
-    margin: 0;
-
-    
-    background: $urlAdress no-repeat top/cover;
-    height: 100vh;
-
-    header {
-
-    .top-wrapper {
-        
-        
+    margin: 0;   
+    .main-wrapper {
         display: flex;
-        justify-content: space-between;
-
-        .logo {
-            img {
-                width: 150px;
-            }
-            
-        }
-        nav{
-            
-            a {
-                @include fontA;
-                padding: 10px 90px 10px 100px;                
-                border-left: 2px solid $colorBorderA;                
-                
-                &:first-child {
-                    border: none;
+        flex-direction: column;
+        align-items: center; 
+        header {
+            background: $urlAdress no-repeat top/cover; 
+            width: 100%;
+            height: 50vw;
+            .top-wrapper {        
+                display: flex;
+                justify-content: space-between;
+                .logo {
+                    img {
+                        width: 15vw;
+                    }            
                 }
-            }            
+                nav{            
+                    a {
+                        @include fontA;               
+                        border-left: 2px solid $colorBorderA; 
+                        padding: 10px 90px 10px 100px;                 
+                        &:first-child {
+                            border: none;
+                        }
+                        &:hover {
+                            @include hoverA;
+                        }
+                    }            
+                }        
+            }   
+            section {            
+                margin-top: 15vw; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;                        
+                h1 {
+                    text-transform: uppercase;                
+                    color: $colorFont;                                
+                }
+                a {                             
+                    @include sectionA;
+                    text-decoration: none;
+                }
+            }
         }
-        
-    }
-       
-
-        section {
-            
-            margin-top: 110vh; 
+        main {
+            color: $colorMain;
+            width: 80%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-                        
-            h1 {
-                text-transform: uppercase;                
-                color: $colorFont;                                
-            }
-
-            a {                             
-                @include sectionA;
-                text-decoration: none;
-            }
-
-        }
-    }
-
-    main {
-        color: $colorMain;
-        width: 80%;
-        margin: 0 auto;
-        position: relative;
-
-        .toolbar {
-            position: absolute;
-            top: -100px;
-            right: 0;
-            
-
-            input {
-                padding: 10px 40px 10px 20px;
-                margin: 10px;
-                border: 1px solid $colorPostH3Border;
-                background: $bodyBg;
-            }
-        }
-
-        #list {
-            margin-top: 100px;            
-            position: relative;
-            
-            h1 {
-                @include listH1; 
-            }
-
-            article {
-                display: flex;
-                margin: 20px 0;
-                
-                background: $articleBg;
-                padding: 10px 20px 10px 10px;
-
-                .post {
-                    margin: 0 0 0 10px ;
-
-                    .post-description {
-                        color: $colorPost;
-                        margin-top: 10px;
-                        font-size: 13px;
-                    }
-
-                    h3 {
-                        @include postH3;
-                    }
-
-                    
+            align-items: flex-end;
+            .toolbar {    
+                input {
+                    padding: 10px 40px 10px 20px;
+                    margin: 10px;
+                    border: 1px solid $colorPostH3Border;
+                    background: $bodyBg;
                 }
-
-                .btn {
-                    @include sectionA;
-                    position: absolute;                    
-                    right: 20px;
-
+            }
+            #list {              
+                h1 {
+                    @include listH1;                 
                 }
-
+                article {
+                    display: flex;
+                    margin: 0 0 20px 0;                
+                    background: $articleBg;
+                    padding: 10px 20px 10px 10px;
+                    .post {
+                        margin: 0 0 0 10px ;
+                        .post-description {
+                            color: $colorPost;
+                            margin-top: 10px;
+                            font-size: 13px;
+                        }
+                        h3 {
+                            @include postH3;
+                        }    
+                        p {
+                            margin: 0;
+                        }                
+                    }
+                    .btn {
+                        @include sectionA;   
+                        float: right;               
+                        right: 20px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            #about {
+                margin-top: 20px;
+                padding: 10px;
+                h1 {
+                    @include listH1;                
+                    right: 10px;
+                }
+                p {
+                    margin: 0 0 20px 0;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            #contact {
+                width: 100%; 
+                margin-top: 40px;                  
+                h1 {
+                    @include listH1;                                
+                }
+                h4 {
+                    @include listH1;                 
+                    top: 10px;
+                }
+                form {
+                    margin-top: 20px;
+                    .topForm{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 15px;                    
+                        input{
+                            height: 40px;
+                            border: $borderForm;
+                            background: $bodyBg;
+                        }                    
+                        #fullName{
+                            width: 530px;
+                        }
+                        #emailAddress{
+                            width: 530px;
+                        }                    
+                    }                
+                    textarea {
+                        width: 100%;
+                        height: 120px;
+                        border: $borderForm;
+                        margin-bottom: 15px;
+                        background: $bodyBg;
+                    }
+                    label{
+                        display: block;                    
+                        color: $colorPostH3;
+                        text-align: right;
+                    }
+                    button {
+                        @include sectionA;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: -10px;
+                    }
+                }
             }
         }
-
-        #about {
-
-            position: relative;
-            margin-top: 100px;
-            padding: 10px;
-
-            h1 {
-                @include listH1;
-                right: 10px;
-            }
-
-            img {
-                width: 100%;
+        footer{
+            display: block;
+            margin-right: auto;
+            span{        
+                color: #000;
+                font-size: 12px;
+                padding: 10px;        
             }
         }
-
-        #contact {
-            position: relative;
-            margin-top: 100px;
-            padding: 10px;
-
-            h1 {
-                @include listH1;                
-            }
-
-            h4 {
-                @include listH1; 
-                top: 10px;
-            }
-        }
-    }
+    }    
 }

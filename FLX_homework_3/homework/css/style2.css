@@ -1,112 +1,157 @@
 body {
   background: #efefef;
   font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  margin: 0;
-  background: url(../img/header_background_v2.jpg) no-repeat top/cover;
-  height: 100vh; }
-  body header .top-wrapper {
-    display: flex;
-    justify-content: space-between; }
-    body header .top-wrapper .logo img {
-      width: 150px; }
-    body header .top-wrapper nav a {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #ff5722;
-      text-decoration: none;
-      padding: 10px 90px 10px 100px;
-      border-left: 2px solid #cfd8dc; }
-      body header .top-wrapper nav a:first-child {
-        border: none; }
-  body header section {
-    margin-top: 110vh;
+  margin: 0; }
+  body .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    body header section h1 {
-      text-transform: uppercase;
-      color: #ff5722; }
-    body header section a {
-      padding: 10px 70px;
-      background: #0401ac;
-      color: #efefef;
-      border: none;
-      text-decoration: none; }
-  body main {
-    color: #757575;
-    width: 80%;
-    margin: 0 auto;
-    position: relative; }
-    body main .toolbar {
-      position: absolute;
-      top: -100px;
-      right: 0; }
-      body main .toolbar input {
+    body .main-wrapper header {
+      background: url(../img/header_background_v2.jpg) no-repeat top/cover;
+      width: 100%;
+      height: 50vw; }
+      body .main-wrapper header .top-wrapper {
+        display: flex;
+        justify-content: space-between; }
+        body .main-wrapper header .top-wrapper .logo img {
+          width: 15vw; }
+        body .main-wrapper header .top-wrapper nav a {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #ff5722;
+          text-decoration: none;
+          border-left: 2px solid #cfd8dc;
+          padding: 10px 90px 10px 100px; }
+          body .main-wrapper header .top-wrapper nav a:first-child {
+            border: none; }
+          body .main-wrapper header .top-wrapper nav a:hover {
+            color: #fff; }
+      body .main-wrapper header section {
+        margin-top: 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .main-wrapper header section h1 {
+          text-transform: uppercase;
+          color: #ff5722; }
+        body .main-wrapper header section a {
+          padding: 10px 70px;
+          background: #0401ac;
+          color: #efefef;
+          border: none;
+          cursor: pointer;
+          text-decoration: none; }
+          body .main-wrapper header section a:hover {
+            background: #1bc5f0; }
+    body .main-wrapper main {
+      color: #757575;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+      body .main-wrapper main .toolbar input {
         padding: 10px 40px 10px 20px;
         margin: 10px;
         border: 1px solid #cfd8dc;
         background: #efefef; }
-    body main #list {
-      margin-top: 100px;
-      position: relative; }
-      body main #list h1 {
+      body .main-wrapper main #list h1 {
         margin: 0;
-        position: absolute;
-        right: 0;
-        top: -25px;
+        text-align: right;
         text-transform: uppercase; }
-      body main #list article {
+      body .main-wrapper main #list article {
         display: flex;
-        margin: 20px 0;
+        margin: 0 0 20px 0;
         background: #fff;
         padding: 10px 20px 10px 10px; }
-        body main #list article .post {
+        body .main-wrapper main #list article .post {
           margin: 0 0 0 10px; }
-          body main #list article .post .post-description {
+          body .main-wrapper main #list article .post .post-description {
             color: #bdbdbd;
             margin-top: 10px;
             font-size: 13px; }
-          body main #list article .post h3 {
+          body .main-wrapper main #list article .post h3 {
             color: #607d8b;
             text-transform: uppercase;
             font-weight: bold;
             border-top: 1px solid #cfd8dc;
             padding: 10px 0 0 0;
             margin: 5px 0; }
-        body main #list article .btn {
+          body .main-wrapper main #list article .post p {
+            margin: 0; }
+        body .main-wrapper main #list article .btn {
           padding: 10px 70px;
           background: #0401ac;
           color: #efefef;
           border: none;
-          position: absolute;
-          right: 20px; }
-    body main #about {
-      position: relative;
-      margin-top: 100px;
-      padding: 10px; }
-      body main #about h1 {
-        margin: 0;
-        position: absolute;
-        right: 0;
-        top: -25px;
-        text-transform: uppercase;
-        right: 10px; }
-      body main #about img {
-        width: 100%; }
-    body main #contact {
-      position: relative;
-      margin-top: 100px;
-      padding: 10px; }
-      body main #contact h1 {
-        margin: 0;
-        position: absolute;
-        right: 0;
-        top: -25px;
-        text-transform: uppercase; }
-      body main #contact h4 {
-        margin: 0;
-        position: absolute;
-        right: 0;
-        top: -25px;
-        text-transform: uppercase;
-        top: 10px; }
+          cursor: pointer;
+          float: right;
+          right: 20px;
+          margin-top: 20px; }
+          body .main-wrapper main #list article .btn:hover {
+            background: #1bc5f0; }
+      body .main-wrapper main #about {
+        margin-top: 20px;
+        padding: 10px; }
+        body .main-wrapper main #about h1 {
+          margin: 0;
+          text-align: right;
+          text-transform: uppercase;
+          right: 10px; }
+        body .main-wrapper main #about p {
+          margin: 0 0 20px 0; }
+        body .main-wrapper main #about img {
+          width: 100%; }
+      body .main-wrapper main #contact {
+        width: 100%;
+        margin-top: 40px; }
+        body .main-wrapper main #contact h1 {
+          margin: 0;
+          text-align: right;
+          text-transform: uppercase; }
+        body .main-wrapper main #contact h4 {
+          margin: 0;
+          text-align: right;
+          text-transform: uppercase;
+          top: 10px; }
+        body .main-wrapper main #contact form {
+          margin-top: 20px; }
+          body .main-wrapper main #contact form .topForm {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px; }
+            body .main-wrapper main #contact form .topForm input {
+              height: 40px;
+              border: 1px solid #cfd8dc;
+              background: #efefef; }
+            body .main-wrapper main #contact form .topForm #fullName {
+              width: 530px; }
+            body .main-wrapper main #contact form .topForm #emailAddress {
+              width: 530px; }
+          body .main-wrapper main #contact form textarea {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #cfd8dc;
+            margin-bottom: 15px;
+            background: #efefef; }
+          body .main-wrapper main #contact form label {
+            display: block;
+            color: #607d8b;
+            text-align: right; }
+          body .main-wrapper main #contact form button {
+            padding: 10px 70px;
+            background: #0401ac;
+            color: #efefef;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: -10px; }
+            body .main-wrapper main #contact form button:hover {
+              background: #1bc5f0; }
+    body .main-wrapper footer {
+      display: block;
+      margin-right: auto; }
+      body .main-wrapper footer span {
+        color: #000;
+        font-size: 12px;
+        padding: 10px; }
