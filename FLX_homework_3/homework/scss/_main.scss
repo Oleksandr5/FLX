@@ -1,0 +1,184 @@
+@mixin fontA {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $colorFont;    
+    text-decoration: none;
+}
+
+@mixin listH1 {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    text-transform: uppercase;
+}
+
+@mixin postH3 {
+    color: $colorPostH3;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 1px solid $colorPostH3Border;
+    padding: 10px 0 0 0;
+    margin: 5px 0;
+}
+
+@mixin sectionA {    
+    padding: 10px 70px;
+    background: $colorBgA;
+    color: $bodyBg;
+    border: none;        
+}
+
+body {
+
+    background: $bodyBg;
+    font: $font;
+    margin: 0;
+
+    
+    background: $urlAdress no-repeat top/cover;
+    height: 100vh;
+
+    header {
+
+    .top-wrapper {
+        
+        
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            img {
+                width: 150px;
+            }
+            
+        }
+        nav{
+            
+            a {
+                @include fontA;
+                padding: 10px 90px 10px 100px;                
+                border-left: 2px solid $colorBorderA;                
+                
+                &:first-child {
+                    border: none;
+                }
+            }            
+        }
+        
+    }
+       
+
+        section {
+            
+            margin-top: 110vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                        
+            h1 {
+                text-transform: uppercase;                
+                color: $colorFont;                                
+            }
+
+            a {                             
+                @include sectionA;
+                text-decoration: none;
+            }
+
+        }
+    }
+
+    main {
+        color: $colorMain;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+
+        .toolbar {
+            position: absolute;
+            top: -100px;
+            right: 0;
+            
+
+            input {
+                padding: 10px 40px 10px 20px;
+                margin: 10px;
+                border: 1px solid $colorPostH3Border;
+                background: $bodyBg;
+            }
+        }
+
+        #list {
+            margin-top: 100px;            
+            position: relative;
+            
+            h1 {
+                @include listH1; 
+            }
+
+            article {
+                display: flex;
+                margin: 20px 0;
+                
+                background: $articleBg;
+                padding: 10px 20px 10px 10px;
+
+                .post {
+                    margin: 0 0 0 10px ;
+
+                    .post-description {
+                        color: $colorPost;
+                        margin-top: 10px;
+                        font-size: 13px;
+                    }
+
+                    h3 {
+                        @include postH3;
+                    }
+
+                    
+                }
+
+                .btn {
+                    @include sectionA;
+                    position: absolute;                    
+                    right: 20px;
+
+                }
+
+            }
+        }
+
+        #about {
+
+            position: relative;
+            margin-top: 100px;
+            padding: 10px;
+
+            h1 {
+                @include listH1;
+                right: 10px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        #contact {
+            position: relative;
+            margin-top: 100px;
+            padding: 10px;
+
+            h1 {
+                @include listH1;                
+            }
+
+            h4 {
+                @include listH1; 
+                top: 10px;
+            }
+        }
+    }
+}

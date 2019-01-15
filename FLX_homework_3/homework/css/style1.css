@@ -1,0 +1,112 @@
+body {
+  background: #fff;
+  font: normal 300 15px/24px Roboto, Ubuntu, Cantarell, Helvetica, sans-serif;
+  margin: 0;
+  background: url(../img/header_background_v1.jpg) no-repeat top/cover;
+  height: 100vh; }
+  body header .top-wrapper {
+    display: flex;
+    justify-content: space-between; }
+    body header .top-wrapper .logo img {
+      width: 150px; }
+    body header .top-wrapper nav a {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 90px 10px 100px;
+      border-left: 2px solid #648b60; }
+      body header .top-wrapper nav a:first-child {
+        border: none; }
+  body header section {
+    margin-top: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body header section h1 {
+      text-transform: uppercase;
+      color: #fff; }
+    body header section a {
+      padding: 10px 70px;
+      background: #01acac;
+      color: #fff;
+      border: none;
+      text-decoration: none; }
+  body main {
+    color: #000;
+    width: 80%;
+    margin: 0 auto;
+    position: relative; }
+    body main .toolbar {
+      position: absolute;
+      top: -100px;
+      right: 0; }
+      body main .toolbar input {
+        padding: 10px 40px 10px 20px;
+        margin: 10px;
+        border: 1px solid #607d8b;
+        background: #fff; }
+    body main #list {
+      margin-top: 100px;
+      position: relative; }
+      body main #list h1 {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: -25px;
+        text-transform: uppercase; }
+      body main #list article {
+        display: flex;
+        margin: 20px 0;
+        background: #efefef;
+        padding: 10px 20px 10px 10px; }
+        body main #list article .post {
+          margin: 0 0 0 10px; }
+          body main #list article .post .post-description {
+            color: #e90303;
+            margin-top: 10px;
+            font-size: 13px; }
+          body main #list article .post h3 {
+            color: #0097a7;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-top: 1px solid #607d8b;
+            padding: 10px 0 0 0;
+            margin: 5px 0; }
+        body main #list article .btn {
+          padding: 10px 70px;
+          background: #01acac;
+          color: #fff;
+          border: none;
+          position: absolute;
+          right: 20px; }
+    body main #about {
+      position: relative;
+      margin-top: 100px;
+      padding: 10px; }
+      body main #about h1 {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: -25px;
+        text-transform: uppercase;
+        right: 10px; }
+      body main #about img {
+        width: 100%; }
+    body main #contact {
+      position: relative;
+      margin-top: 100px;
+      padding: 10px; }
+      body main #contact h1 {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: -25px;
+        text-transform: uppercase; }
+      body main #contact h4 {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: -25px;
+        text-transform: uppercase;
+        top: 10px; }
