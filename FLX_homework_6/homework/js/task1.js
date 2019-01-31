@@ -1,7 +1,6 @@
 var a = prompt ("Enter the value a =", "0");
 var b = prompt ("Enter the value b =", "0");
 var c = prompt ("Enter the value c= ", "0");
-
 if (a===0 || isNaN(a) || isNaN(b) || isNaN(c)) {
     alert ('Invalid input data');
 } else {
