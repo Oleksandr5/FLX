@@ -4,7 +4,7 @@ var c = prompt("Enter the value c= ", "0").trim();
 if (isNaN(a) || isNaN(b) || isNaN(c)) {
     alert('Invalid input data');
 } else {
-    if (a === "0" || a.length === 0 || b.length === 0 || c.length === 0 || a === null || b === null || c === null) {
+    if (a === "0" || a.length === 0 || b.length === 0 || c.length === 0) {
         alert('Invalid input data');
     } else {
         var D = Math.pow(b, 2) - 4 * a * c;

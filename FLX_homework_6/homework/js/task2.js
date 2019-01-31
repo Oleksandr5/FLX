@@ -3,7 +3,7 @@ var discount = prompt("Enter the discount: ", "0").trim();
 if (isNaN(amount) || isNaN(discount)) {
     alert('Invalid input data');
 } else {
-    if (amount.length === 0 || discount.length === 0 || amount === null || discount === null) {
+    if (amount.length === 0 || discount.length === 0) {
         alert('Invalid input data');
     } else {
         if (amount >= 0 && amount <= 9999999 && discount >= 0 && discount <= 99) {
