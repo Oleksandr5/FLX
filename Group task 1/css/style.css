@@ -1,0 +1,42 @@
+body {    
+    background: #e8edf0;
+    width: 60%;
+    margin: 0 auto;
+}
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+}
+.main-wrapper div {
+    width: 50%;
+}
+.main-wrapper img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.phone-4{
+    position: relative;
+    top: 15vh;
+    right: 3vw;
+}
+.phone-4:hover {
+    position: relative;
+    bottom: 5vw;
+    left: 3vw;
+    z-index: 1;
+}
+.phone-3{
+    position: relative;
+    top: 12vh;
+    right: 12vw;
+}
+.phone-1{
+    
+}
+.phone-2{
+    position: relative;
+    right: 10vw;
+}
