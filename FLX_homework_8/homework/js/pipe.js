@@ -1,4 +1,4 @@
-function addOne(x) {
+function multiplyTwo(x) {
     return x * 2;
 }
 function pipe() {
@@ -9,4 +9,4 @@ function pipe() {
     }
     return result;
 }
-pipe(3, addOne, addOne);
+pipe(3, multiplyTwo, multiplyTwo);
