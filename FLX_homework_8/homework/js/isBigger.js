@@ -1,5 +1,4 @@
-function isBigger (number1,number2) {
-    return number1 > number2;
+function isBigger(value1, value2) {
+    return value1 > value2;
 }
-
-isBigger (5,1);
+isBigger(5, 1);
