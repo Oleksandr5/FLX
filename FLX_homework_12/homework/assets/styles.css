@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#root {
+    margin-top: 3vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3vw;
+}
+h2{
+    font-weight: 300;
+    margin-top: -1vw;
+    font-size: 7vh;  
+    color: #dd0e0e;  
+}
+.btn{
+    margin-top: 1.5vw;
+    margin-bottom: 2vw;
+    width: 17vw;
+    font-size: 1.3vw;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    background: #31f04b;
+    padding: 2vh 2vw;
+}
+#listUl {
+    list-style-type: none;
+    width: 34vw;
+}
+li{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.1488vw;
+}
+.edit{
+    padding: 0 1vw;
+    width: 80%;
+    font-size: 6vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+img{
+    width: 10%;
+    cursor: pointer;
+}
+#input{
+    padding-left: 0.3%;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    width: 31%;
+    height: 3vw;
+    font-size: 2.5vh;
+} 
+#modify{
+    padding: 1vh 1vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.2vw;
+    width: 29.5%;
+    height: 2vw;
+    font-size: 3vh;
+}
+.addItem {
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttonModifyItem {
+    font-size: 2vh;
+    border-radius: 0.6vw;
+    width: 9vw;
+    border: none;
+    cursor: pointer;
+    background: #31f04b;
+    padding: 0.5vh 2vw;
+}
+.buttonNewItem {
+    font-size: 1.5vw;
+    border-radius: 0.6vw;
+    width: 9vw;
+    border: none;
+    cursor: pointer;
+    background: #31f04b;
+    padding: 0.3vh 1.5vw;
+}
